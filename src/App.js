@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+import { Header, Searchbar, ProfileCard } from "./components";
 
-function App() {
+import { UserContext } from "./context/UserContext";
+import useDarkMode from "./hooks/useDarkMode";
+
+const App = () => {
+  const [user, setUser] = useState({});
+  // useDarkMode();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={{ user, setUser }}>
+      <main className="font-primary bg-ghostWhite dark:bg-darkGunMetal dark:text-white px-6 text-fs_body min-h-screen flex items-center justify-center transition duration-500">
+        <div className="w-full sm:max-w-[573px] md:max-w-[730px]">
+          <Header />
+          <Searchbar />
+          <ProfileCard />
+        </div>
+      </main>
+    </UserContext.Provider>
   );
-}
+};
 
 export default App;
