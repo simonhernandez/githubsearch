@@ -67,7 +67,7 @@ const ProfileCard = () => {
         </li>
         <li className="flex items-center gap-2 sm:basis-2/5">
           <IconWebsite />
-          <p><a href={user.blog !== null ? user.blog : ""}>{user.blog !== null ? user.blog : "Not available"}</a></p>
+          <p><a href={user.blog !== null ? user.blog : ""} target="_blank" rel="noreferrer">{user.blog !== null ? user.blog : "Not available"}</a></p>
         </li>
         <li className="flex items-center gap-2 sm:basis-2/5">
           <IconTwitter />
