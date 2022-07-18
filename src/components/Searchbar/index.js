@@ -17,6 +17,12 @@ const Searchbar = () => {
   const handleOnClick = () => {
     fetchUser(searchTerm).then((result) => setUser(result));
   };
+  
+  const handleOnKeyDown = (event) => {
+    if (event.key === "Enter"){
+      fetchUser(searchTerm).then((result) => setUser(result));
+    }
+  }
 
   return (
     <div className="flex justify-between items-center sm:justify-start sm:gap-6 bg-white p-[7px] dark:bg-yankeesBlue rounded-[15px] shadow-searchbar mb-4">
@@ -26,6 +32,7 @@ const Searchbar = () => {
         placeholder="Search Github username..."
         className="text-[13px] bg-transparent"
         onChange={handleInputChange}
+        onKeyDown={handleOnKeyDown}
       />
       <button
         className="px-[18px] py-[12px] rounded-[10px] bg-azure text-white text-[14px] font-bold sm:ml-auto"

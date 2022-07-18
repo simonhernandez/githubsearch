@@ -32,7 +32,7 @@ const ProfileCard = () => {
             </a>
           </h3>
           <p>
-            Joined <date>{`${new Date(user.created_at).getDate()} ${new Intl.DateTimeFormat('en-US', {month: 'short'}).format(new Date(user.created_at))} ${new Date(user.created_at).getFullYear()}`}</date>
+            Joined <date>{`${new Date(user.created_at).getDate()} ${new Date(user.created_at).toDateString().split(" ")[1]} ${new Date(user.created_at).getFullYear()}`}</date>
           </p>
         </div>
       </div>
