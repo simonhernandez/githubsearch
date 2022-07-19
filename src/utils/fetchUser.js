@@ -7,9 +7,9 @@ export const fetchUser = async(user) => {
     const response = await githubAPI.get(user);
     console.log(response.data);
     return response.data
-    // console.log("usuario: " + user)
   } catch (error) {
     console.log(error)
+    return null
   }
 
 }

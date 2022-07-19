@@ -25,6 +25,11 @@ module.exports = {
         fs_h3: '1rem',
         fs_h4: '.8125rem',
         fs_body: '.8125rem',
+        fs_h1_lg: '1.625rem',
+        fs_h2_lg: '1.625rem',
+        fs_h3_lg: '1rem',
+        fs_h4_lg: '.8125rem',
+        fs_body_lg: '.9375rem',
       },
       fontWeight: {
         fw_h1: '700',

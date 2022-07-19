@@ -11,8 +11,8 @@ const App = () => {
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
-      <main className="font-primary bg-ghostWhite dark:bg-darkGunMetal dark:text-white px-6 text-fs_body min-h-screen flex items-center justify-center transition duration-500">
-        <div className="w-full sm:max-w-[573px] md:max-w-[730px]">
+      <main className="font-primary bg-ghostWhite dark:bg-darkGunMetal dark:text-white px-6 text-fs_body lg:text-fs_body_lg min-h-screen flex items-center justify-center transition duration-500">
+        <div className="w-full sm:max-w-[573px] lg:max-w-[730px]">
           <Header />
           <Searchbar />
           <ProfileCard />
